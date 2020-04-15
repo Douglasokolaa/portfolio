@@ -425,22 +425,22 @@
 							<div class="contact-left">
 								<div class="contact-left--content my-4 pb-3">
 									<h4>My Location</h4>
-									<a target="_blank" href="https://www.google.com/maps/place/Miami,+FL,+USA/@25.9327954,-81.0246914,7.88z/data=!4m5!3m4!1s0x88d9b0a20ec8c111:0xff96f271ddad4f65!8m2!3d25.7616798!4d-80.1917902">Miami, FL</a>
+									<a target="_blank" href="#">Nigeria</a>
 								</div>
 								<div class="contact-left--content my-4 pb-3">
 									<h4>Mail</h4>
-									<a href="mailto:hello@beingeorge.com">hello@beingeorge.com</a>
+									<a href="mailto:hello@codeindoug.com">hello@codeindoug.com</a>
 								</div>
 								<div class="contact-left--content my-4 pb-3">
 									<h4>Phone</h4>
-									<a href="tel:0987654321">098 765 4321</a>
+									<a href="tel:+2348130488941">0813 048 8941</a>
 								</div>
 							</div>
 
 						</div>
 						<div class="col-md-6">
 							<div class="contact-form">
-								<form>
+								<form id="contact_me">
 									<div class="contact-form--wrap p-4 p-md-5">
 										<div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s">
 											<input name="name" id="name" type="text" class="form-control s/website.css" placeholder="Your Name*" required>
@@ -452,7 +452,7 @@
 											<textarea name="comments" id="comments" rows="4" class="form-control s/website.css" placeholder="Your message..."></textarea>
 										</div>
 										<div class=" text-center mt-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".5s">
-											<a href="#" class="btn ">Submit</a>
+											<button type="submit" class="btn ">Submit</button>
 										</div>
 									</div>
 								</form>

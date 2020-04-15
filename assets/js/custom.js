@@ -1,34 +1,34 @@
 /*-----------------------------------------------------------
-* Template Name    : Mason - Creative Portfolio
-* Author           : beingeorge
-* Version          : 1.0
-* Created          : Apr 2020
-* File Description : Main Js file of the template
-*------------------------------------------------------------
-*/
+ * Template Name    : Mason - Creative Portfolio
+ * Author           : beingeorge
+ * Version          : 1.0
+ * Created          : Apr 2020
+ * File Description : Main Js file of the template
+ *------------------------------------------------------------
+ */
 
-! function($) {
+! function ($) {
     "use strict";
 
     /* ---------------------------------------------- /*
     * Preloader
     /* ---------------------------------------------- */
 
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         $('#preloader').addClass("loaded");
     });
 
     /* ---------------------------------------------- /*
     * Section Scroll - Navbar
     /* ---------------------------------------------- */
-    
-    $('.navbar-nav a').on('click', function(event) {
+
+    $('.navbar-nav a').on('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - 0
         }, 1500, 'easeInOutExpo');
 
-        if($('.navbar').hasClass('active')){
+        if ($('.navbar').hasClass('active')) {
             $('.navbar').removeClass('active')
             $('.ham').removeClass('active')
         }
@@ -36,14 +36,14 @@
         event.preventDefault();
     });
 
-    $('.navbar-toggler').on('click', function(){
+    $('.navbar-toggler').on('click', function () {
         $('.aside').toggleClass('aside-open');
         $(".ham").toggleClass('active');
     });
 
 
-    $(window).on("scroll",function() {
-        if ($(this).scrollTop() > 50 ) {
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 50) {
             $('.section-about').addClass("in");
             $('.overlay-wrap').fadeOut(400);
         } else {
@@ -51,7 +51,7 @@
             $('.overlay-wrap').fadeIn(400);
         }
 
-        if ($(this).scrollTop() > 50 ) {
+        if ($(this).scrollTop() > 50) {
             $('.navbar').addClass("header-collapse");
         } else {
             $('.navbar').removeClass("header-collapse");
@@ -63,7 +63,7 @@
     /* ---------------------------------------------- */
 
     $("#navbarCollapse").scrollspy({
-        offset:20
+        offset: 20
     });
 
     /* ---------------------------------------------- /*
@@ -85,7 +85,7 @@
             duration: 300,
             easing: 'ease-in-out',
 
-            opener: function(openerElement) {
+            opener: function (openerElement) {
                 return openerElement.is('img') ? openerElement : openerElement.find('img');
             }
         }
@@ -108,7 +108,7 @@
             rotate: 25,
             stretch: 0,
             depth: 150,
-            slideShadows : false,
+            slideShadows: false,
         },
         breakpoints: {
             767: {
@@ -137,38 +137,40 @@
     /* ---------------------------------------------- */
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        $('#home').css({'background-attachment': 'scroll'});
+        $('#home').css({
+            'background-attachment': 'scroll'
+        });
     } else {
         $('#home').parallax('50%', -0.3);
     }
 
-    if($('.section-home').length) {
+    if ($('.section-home').length) {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-            $('.swiper-slide').css({'background-attachment': 'scroll'});
+            $('.swiper-slide').css({
+                'background-attachment': 'scroll'
+            });
         } else {
             $('.swiper-slide').parallax('50%', -0.3);
-        }        
+        }
     }
 
     /* ---------------------------------------------- /*
     * AnimateOnScroll - Init
     /* ---------------------------------------------- */
 
-    var wow = new WOW(
-      {
-        boxClass:     'wow',      // animated element css class (default is wow)
+    var wow = new WOW({
+        boxClass: 'wow', // animated element css class (default is wow)
         animateClass: 'animated', // animation css class (default is animated)
-        offset:       0,          // distance to the element when triggering the animation (default is 0)
-        mobile:       true,       // trigger animations on mobile devices (default is true)
-        live:         true,       // act on asynchronously loaded content (default is true)
-        callback:     function(box) {
-          // the callback is fired every time an animation is started
-          // the argument that is passed in is the DOM node being animated
+        offset: 0, // distance to the element when triggering the animation (default is 0)
+        mobile: true, // trigger animations on mobile devices (default is true)
+        live: true, // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+            // the callback is fired every time an animation is started
+            // the argument that is passed in is the DOM node being animated
         },
-        scrollContainer: null,    // optional scroll container selector, otherwise use window,
-        resetAnimation: true,     // reset animation on end (default is true)
-      }
-    );
+        scrollContainer: null, // optional scroll container selector, otherwise use window,
+        resetAnimation: true, // reset animation on end (default is true)
+    });
     wow.init();
 
     /* ---------------------------------------------- /*
@@ -176,7 +178,7 @@
     /* ---------------------------------------------- */
 
 
-    if($('.youtube-bg').length) {
+    if ($('.youtube-bg').length) {
         $(".youtube-bg").mb_YTPlayer();
     }
 
@@ -184,7 +186,7 @@
     * Typed init
     /* ---------------------------------------------- */
 
-    $(".typed").each(function() {
+    $(".typed").each(function () {
         var $this = $(this);
         $this.typed({
             strings: $this.attr('data-elements').split(','),
@@ -194,21 +196,21 @@
     });
 
 
-    if($('.thumbnail').length > 0) {
+    if ($('.thumbnail').length > 0) {
         var image = document.getElementsByClassName('thumbnail');
         new simpleParallax(image, {
             orientation: 'up right',
             overflow: true
         });
     }
-    
 
-    $(window).on('scroll', function() {
-      $(".portfolio-item--content").each(function() {
-        if (isScrolledIntoView($(this))) {
-          $(this).addClass("reveal");
-        }
-      });
+
+    $(window).on('scroll', function () {
+        $(".portfolio-item--content").each(function () {
+            if (isScrolledIntoView($(this))) {
+                $(this).addClass("reveal");
+            }
+        });
     });
 
     function isScrolledIntoView(elem) {
@@ -223,3 +225,19 @@
 
 }(window.jQuery);
 
+$('#contact_me').submit(function (e) {
+    let notice = '    <div id="noticeF" class="alert alert-primary alert-dismissible fade show" role="alert">'
+    notice += '    <button type="button" class="close" data-dismiss="alert" aria-label="Close">'
+    notice += '        <span aria-hidden="true">&times;</span>'
+    notice += '        <span class="sr-only">Close</span>'
+    notice += '    </button>'
+    notice += '    <strong>Heya!</strong> coming soon.'
+    notice += '    </div>'
+
+    $('#contact_me').after(notice);
+    $('html, body').animate({
+        scrollTop: $("#noticeF").offset().top
+    }, 2000);
+    e.preventDefault();
+    return false;
+});
