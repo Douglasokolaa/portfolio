@@ -231,7 +231,7 @@ $('#contact_me').submit(function (e) {
     notice += '        <span aria-hidden="true">&times;</span>'
     notice += '        <span class="sr-only">Close</span>'
     notice += '    </button>'
-    notice += '    <strong>Heya!</strong> coming soon.'
+    notice += '    <strong>Thanks for writing to me!</strong> I will respond ASAP.'
     notice += '    </div>'
 
     $('#contact_me').after(notice);
