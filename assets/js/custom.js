@@ -226,6 +226,8 @@
 }(window.jQuery);
 
 $('#contact_me').submit(function (e) {
+    e.preventDefault();
+
     let notice = '    <div id="noticeF" class="alert alert-primary alert-dismissible fade show" role="alert">'
     notice += '    <button type="button" class="close" data-dismiss="alert" aria-label="Close">'
     notice += '        <span aria-hidden="true">&times;</span>'
@@ -238,5 +240,5 @@ $('#contact_me').submit(function (e) {
     $('html, body').animate({
         scrollTop: $("#noticeF").offset().top
     }, 2000);
-    
+  //  return false;
 });

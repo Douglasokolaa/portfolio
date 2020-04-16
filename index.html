@@ -14,7 +14,8 @@
 
 	<!-- Assets-->
 	<link rel="stylesheet" href="assets/css/vendor.min.css" />	
-	<link href="assets/css/mason-dark.min.css" rel="stylesheet">
+	<link href="assets/css/dark.min.css" rel="stylesheet">
+	<link href="assets/css/custom.min.css" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
@@ -70,7 +71,8 @@
 	 	   			</div>
 	 	   			<div class="col-md-3">
 	 	   				<div class="socialShare">
-						  	<input type="checkbox" />
+							<label for="social_button" class=" d-none">connect with me</label>
+						  	<input type="checkbox" id="social_button" />
 						  	<div class="btn-plus"></div>
 							<div class="tooltip">
 								<ul class="list-unstyled list-inline">
@@ -161,7 +163,7 @@
 
 					<div class="col-md-6">
 						<div class="simpleParallax-wrap">
-							<img class="thumbnail img-fluid d-block wow fadeInUp" src="assets/images/avatar.jpg" alt="About Picture">
+							<img class="thumbnail img-fluid d-block wow fadeInUp" src="assets/images/DouglasSVG.svg" alt="About Picture">
 							<img class="about-dots" src="assets/images/dots.svg" alt="About dots">
 						</div>
 					</div>
@@ -171,18 +173,13 @@
 							<div class="about-desc-content text-left">
 								<h2>About Me</h2>
 								<p class="mt-5 mb-4">
-
-									Performance-driven and motivated Full Stack Developer with 
-									2 years experience in participating 
-									in all phases of software development
-<!-- 
-									Dedicated and efficient full stack developer with
-
-									Possess a strong attention to detail, well-developed time management skills, 
-									and ability to complete all projects within schedule and in a timely manner.
-
+									I am a Performance-driven Full Stack Developer having 
+									2 years experience with strong attention to detail,
+									well-developed time management skills, 
+									and ability to complete all projects in a timely mannerin all phases of software development
+<!-- 								Dedicated and efficient full stack developer with
 									Passionate designer & developer who loves simplicity in things
-									 and crafts beautiful user interfaces with love. -->
+									and crafts beautiful user interfaces with love. -->
 								</p>
 
 								<a href="#contact" class="btn">Contact Me</a>
@@ -199,14 +196,14 @@
 			<div class="container">
 				<div class="section-head">
 					<span>Skills</span>
-					<h2>My Services</h2>
+					<h2>Services I provide</h2>
 				</div>
 
 				<div class="row">
 					<div class="col-sm-6 col-md-3">
 						<div class="services-list py-4 p-md-4 mb-4">
 							<div class="services-list-icon">
-								<i class="fas fa-puzzle-piece"></i> 
+								<i class="fa fa-puzzle-piece "></i> 
 							</div>
 							<div class="mt-4">
 								<h5 class="mb-0">Web App Development</h5>
@@ -221,7 +218,7 @@
 							</div>
 							<div class="mt-4">
 								<h5 class="mb-0">Website Development</h5>
-								<p class=" mt-3">Modern and mobile-ready website that will help of your marketing.</p>
+								<p class=" mt-3">Modern and mobile-ready website that will give the rigt audience.</p>
 							</div>
 						</div>
 					</div>
@@ -239,11 +236,11 @@
 					<div class="col-sm-6 col-md-3">
 						<div class="services-list py-4 p-md-4 mb-4">
 							<div class="services-list-icon">
-								<i class="fa fa-compact-disc" aria-hidden="true"></i> 
+								<i class="fa fa-users-cog" aria-hidden="true"></i> 
 							</div>
 							<div class="mt-4">
 								<h5 class="mb-0">Maintenance / Optimisation</h5>
-								<p class=" mt-3">Modern and mobile-ready website that will help of your marketing.</p>
+								<p class=" mt-3"> focus on Sales while I keep your technology in an optimal State</p>
 							</div>
 						</div>
 					</div>
@@ -393,8 +390,10 @@
 											<input name="email" id="email" type="email" class="form-control s/website.css" placeholder="Your Email*" required>
 										</div>
 										<div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
+											
 											<textarea name="comments" id="comments" rows="4" class="form-control s/website.css" placeholder="Your message..."></textarea>
 										</div>
+										<div data-netlify-recaptcha="true"></div>
 										<div class=" text-center mt-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".5s">
 											<button type="submit" class="btn ">Submit</button>
 										</div>
@@ -407,6 +406,63 @@
 			</div>
 		</section>
 		<!-- END: CONTACT -->
+
+		
+<!-- START : TECHNOLOGIES -->
+
+<div class="key-features padding-medium">
+	<div class="container">
+		<div class="section-head text-center">
+			<span>TECHNOLOGIES</span>
+			<h2>Technologies i use</h2>
+		</div>
+		<div class="key-feature--content">
+			<ul>
+				<li>
+					<div class="key-item">
+						<i class="fab fa-bootstrap fa-5x"></i>
+					</div>	
+				</li>
+				<li>
+					<div class="key-item">
+						<i class="fab fa-html5 fa-5x"></i>
+					</div>	
+				</li>
+				<li>
+					<div class="key-item">
+						<i class="fab fa-node-js fa-5x"></i>
+					</div>	
+				</li>
+				<li>
+					<div class="key-item">
+						<i class="fab fa-php fa-5x"></i>
+					</div>	
+				</li>
+				<li>
+					<div class="key-item">
+						<i class="fab fa-angular fa-5x"></i>
+					</div>	
+				</li>
+				<li>
+					<div class="key-item">
+						<i class="fab fa-vuejs fa-5x"></i>
+					</div>	
+				</li>
+				<li>
+					<div class="key-item">
+						<i class="fab fa-git fa-5x"></i>
+					</div>	
+				</li>
+				<li>
+					<div class="key-item">
+						<i class="fab fa-laravel fa-5x"></i>
+					</div>	
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END :TECHNOLOGIES -->
 
 		<!--START: FOOTER-->
 		<footer class="footer">
