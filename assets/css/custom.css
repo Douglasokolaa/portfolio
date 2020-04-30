@@ -15,10 +15,10 @@
     height: 150px;
     width: 150px;
     margin: 0 auto;
-    /* background: #fff; */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.1);
 }
 
@@ -29,6 +29,22 @@
     max-width: 150px;
 }
 
-.key-item img {
+.key-item i {
     max-width: 60px;
+}
+
+@media (max-width: 991px) {
+    .key-feature--content li {
+        width: 33.3%;
+    }
+}
+
+@media (max-width: 767px) {
+    .key-feature--content li {
+        width: 50%;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+    }
 }

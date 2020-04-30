@@ -240,5 +240,4 @@ $('#contact_me').submit(function (e) {
     $('html, body').animate({
         scrollTop: $("#noticeF").offset().top
     }, 2000);
-  //  return false;
 });
